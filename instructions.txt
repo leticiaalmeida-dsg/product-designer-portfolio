@@ -1,0 +1,57 @@
+Now:
+Please create a Hero.tsx component with the above structure and styles, using Next.js + Tailwind. Include semantic HTML (h1, p). Align the text exactly as described.
+
+Structure & Requirements:
+
+Use app/components/Hero.tsx as a React component.
+Inside it, create the following div hierarchy:
+
+section
+  └─ container
+      └─ hero_wrapper
+          ├─ display_wrapper (first line, aligned right)
+          │   └─ h1 “PRODUCT”
+          ├─ display_wrapper (second line, aligned left)
+          │   ├─ arrow_large (svg)
+          │   └─ h1 “DESIGNER”
+          └─ subtext-wrapper
+              ├─ p “BUILDING BRANDS WITH PURPOSE”
+              └─ p “PRODUCTS AND EXPERIENCES”
+Typography:
+
+h1 font-size: 12vw
+
+p font-size: 1.25rem
+
+Font weight: normal (400)
+
+Font: system default for now (can swap later).
+
+Alignment:
+First line (“PRODUCT”): flex container, justify-end (right-aligned).
+
+Second line (“→ DESIGNER”): flex container, justify-start (left-aligned).
+
+Subtext lines: centered horizontally.
+
+SVG Arrow:
+Place inside a wrapper div before the “DESIGNER” text.
+
+Use inline SVG code:
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-12 h-12 text-pink-500">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M5 19l14-14M19 5h-6m6 0v6" />
+</svg>
+Size around 3rem (adjustable).
+
+Spacing:
+
+Follow Webflow paddings:
+
+container → padding: py-48 px-[10%].
+
+subtext-wrapper → small margin-top, text centered.
+
+Colors:
+Background: #080808.
+Text: white.
+Arrow: #ff4e8a (pink highlight).
