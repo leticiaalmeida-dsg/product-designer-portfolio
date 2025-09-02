@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import gsap from 'gsap';
-import Flip from 'gsap/Flip';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,69 +13,9 @@ export default function Navigation() {
   const hamburgerRef = useRef<HTMLDivElement>(null);
   const flipItemRef = useRef<HTMLDivElement>(null);
   const menuLinksRef = useRef<HTMLDivElement>(null);
-  const hamburgerLinesRef = useRef<HTMLDivElement[]>([]);
+  const hamburgerLinesRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const initGSAP = async () => {
-//      const gsap = (await import('gsap')).default;
-//      const Flip = (await import('gsap/dist/Flip')).default;
-//      gsap.registerPlugin(Flip);
-
-      const flipDuration = 0.6;
-
-      const flip = (forwards: boolean) => {
-        const state = Flip.getState(flipItemRef.current);
-        if (!flipItemRef.current || !menuContainerRef.current || !hamburgerRef.current) return;
-
-        if (forwards) {
-          menuContainerRef.current.appendChild(flipItemRef.current);
-        } else {
-          hamburgerRef.current.appendChild(flipItemRef.current);
-        }
-
-        Flip.from(state, { duration: flipDuration, ease: "power1.inOut" });
-      };
-
-      const tl = gsap.timeline({ paused: true });
-
-      tl.set(menuWrapperRef.current, { display: "flex" });
-
-      tl.from(menuBaseRef.current, {
-        opacity: 0,
-        duration: flipDuration,
-        ease: "none",
-        onStart: () => flip(true),
-      });
-
-      tl.to(hamburgerLinesRef.current[0], {
-        y: 4,
-        rotate: 45,
-        duration: flipDuration,
-      }, "<");
-
-      tl.to(hamburgerLinesRef.current[1], {
-        y: -4,
-        rotate: -45,
-        duration: flipDuration,
-      }, "<");
-
-      tl.from(menuLinksRef.current, {
-        opacity: 0,
-        yPercent: 50,
-        duration: 0.2,
-        stagger: { amount: 0.2 },
-        onReverseComplete: () => flip(false),
-      });
-
-      if (isMenuOpen) {
-        tl.play();
-      } else {
-        tl.reverse();
-      }
-    };
-
-    initGSAP();
-
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsMenuOpen(false);
     };
@@ -127,7 +65,7 @@ export default function Navigation() {
       {/* Menu Overlay */}
       <div 
         ref={menuWrapperRef}
-        className="menu-wrapper hidden md:hidden absolute top-0 right-0 bottom-auto left-0 z-[1] items-start justify-end w-full h-screen p-[1.1rem]"
+        className={`menu-wrapper absolute top-0 right-0 bottom-auto left-0 z-[1] items-start justify-end w-full h-screen p-[1.1rem] ${isMenuOpen ? 'flex' : 'hidden'}`}
       >
         {/* Background Overlay */}
         <div 

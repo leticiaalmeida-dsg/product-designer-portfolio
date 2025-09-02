@@ -1,44 +1,39 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Lenis from '@studio-freight/lenis';
 
-declare global {
-  interface Window {
-    Lenis: typeof Lenis;
-  }
-}
-
 export default function LenisScript() {
+  const lenisRef = useRef<Lenis | null>(null);
+
   useEffect(() => {
-    const initializeLenis = () => {
-      if (typeof window !== 'undefined' && window.Lenis) {
-        const lenis = new window.Lenis({
-          lerp: 0.02,
-          wheelMultiplier: 1.2,
-          gestureOrientation: "vertical",
-          //normalizeWheel: true,
-          //smoothTouch: false,
-        });
+    // Initialize Lenis
+    lenisRef.current = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      //direction: 'vertical',
+      // gestureDirection: 'vertical',
+      //smooth: true,
+      //smoothTouch: false,
+      touchMultiplier: 2,
+    });
 
-        function raf(time: number) {
-          lenis.raf(time);
-          requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-
-        console.log('Lenis smooth scroll initialized');
+    // Set up RAF
+    function raf(time: number) {
+      if (lenisRef.current) {
+        lenisRef.current.raf(time);
       }
-    };
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
 
-    // Initialize after a short delay to ensure DOM is ready
-    const timer = setTimeout(initializeLenis, 100);
-
+    // Cleanup
     return () => {
-      clearTimeout(timer);
+      if (lenisRef.current) {
+        lenisRef.current.destroy();
+      }
     };
   }, []);
 
-  // This component doesn't render anything
   return null;
 }

@@ -178,6 +178,8 @@ export default function ForaDaLata() {
                   src="/images/Grid_image-02_Fora-da-Lata.jpg"
                   alt="Project mockup 1"
                   className="w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
                 />
               </div>
 
@@ -187,6 +189,8 @@ export default function ForaDaLata() {
                   src="/images/Grid_image-03_Fora-da-Lata.jpg"
                   alt="Project mockup 2"
                   className="w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
                 />
               </div>
             </div>
@@ -228,6 +232,8 @@ export default function ForaDaLata() {
                   src="/images/Scroll-section_Fora-da-Lata_01.png"
                   alt="Fora da Lata tablet view"
                   className="absolute top-0 left-0 w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
                 />
               </div>
             </div>
@@ -240,6 +246,8 @@ export default function ForaDaLata() {
                   src="/images/Scroll-section_Fora-da-Lata_02.png"
                   alt="Fora da Lata mobile interface"
                   className="absolute top-0 left-0 w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
                 />
               </div>
 
@@ -249,6 +257,8 @@ export default function ForaDaLata() {
                   src="/images/Scroll-section_Fora-da-Lata_03.png"
                   alt="Fora da Lata mobile interface"
                   className="absolute top-0 left-0 w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
                 />
               </div>
 
@@ -258,6 +268,8 @@ export default function ForaDaLata() {
                   src="/images/Scroll-section_Fora-da-Lata_04.png"
                   alt="Fora da Lata mobile interface"
                   className="absolute top-0 left-0 w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
                 />
               </div>
             </div>
@@ -312,6 +324,8 @@ export default function ForaDaLata() {
                 src="/images/Social_Fora-01.jpg"
                 alt="Fora da Lata Instagram post"
                 className="absolute top-0 left-0 w-full h-full object-cover"
+                width={1000}
+                height={1000}
               />
             </div>
 
@@ -321,6 +335,8 @@ export default function ForaDaLata() {
                 src="/images/Social_Fora-02.jpg"
                 alt="Fora da Lata Instagram post"
                 className="absolute top-0 left-0 w-full h-full object-cover"
+                width={1000}
+                height={1000}
               />
             </div>
 
@@ -330,6 +346,8 @@ export default function ForaDaLata() {
                 src="/images/Social_Fora-03.jpg"
                 alt="Fora da Lata Instagram post"
                 className="absolute top-0 left-0 w-full h-full object-cover"
+                width={1000}
+                height={1000}
               />
             </div>
           </div>
@@ -412,6 +430,8 @@ export default function ForaDaLata() {
                 src="/images/edp_card.jpg"
                 alt="EDP Challenge preview"
                 className="w-full h-[12.5rem] object-cover"
+                width={1000}
+                height={1000}
               />
             </div>
           </Link>

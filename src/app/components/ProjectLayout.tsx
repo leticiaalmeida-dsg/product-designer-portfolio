@@ -63,6 +63,8 @@ export default function ProjectLayout({
                 src={coverImage}
                 alt={`${title} project cover`}
                 className="w-full h-full object-cover"
+                width={1000}
+                height={1000}
               />
             </div>
           </div>

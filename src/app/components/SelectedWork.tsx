@@ -37,6 +37,8 @@ export default function SelectedWork() {
                 src="/images/fora-da-lata_card.jpg"
                 alt="Fora da Lata Innovation Campaign"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                width={1000}
+                height={1000}
               />
             </div>
             <div className="space-y-2">
@@ -56,6 +58,8 @@ export default function SelectedWork() {
                 src="/images/edp_card.jpg"
                 alt="EDP Challenge Innovation Campaign"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                width={1000}
+                height={1000}
               />
             </div>
             <div className="space-y-2">
@@ -75,6 +79,8 @@ export default function SelectedWork() {
                 src="/images/sem-parar_card.jpg"
                 alt="Sem Parar Innovation Challenge"
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                width={1000}
+                height={1000}
               />
             </div>
             <div className="space-y-2">

@@ -116,7 +116,7 @@ export default function Hero() {
                       fill="none" 
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path d="M62.9648 1.03516V57.5283H54.3877V15.6768L52.6201 17.4443L7.52832 62.5352L1.46387 56.4707L46.5508 11.3799L48.3184 9.6123H6.47168V1.03516H62.9648Z" fill="#FF76A2" stroke="#FF76A2" stroke-width="2.07093"/>
+                      <path d="M62.9648 1.03516V57.5283H54.3877V15.6768L52.6201 17.4443L7.52832 62.5352L1.46387 56.4707L46.5508 11.3799L48.3184 9.6123H6.47168V1.03516H62.9648Z" fill="#FF76A2" stroke="#FF76A2" strokeWidth="2.07093"/>
                     </svg>
                   </div>
                   <span className="block">DESIGNER</span>
@@ -137,6 +137,8 @@ export default function Hero() {
               src="/images/home-hero_photo.jpg"
               alt="MacBook mockup showcasing design work"
               className="home-hero_photo w-full h-full object-cover"
+              width={1000}
+              height={1000}
             />
           </div>
         </div>
