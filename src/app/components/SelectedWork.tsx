@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import { allProjects } from '@/lib/projects';
+import ProjectTag from './ProjectTag';
 
 export default function SelectedWork() {
+  const projects = [...allProjects].sort((a, b) => b.year - a.year);
   return (
     <section id="works" className="bg-[#080808] text-white py-20 px-[10%]">
       <div className="container mx-auto">
@@ -30,68 +33,28 @@ export default function SelectedWork() {
 
         {/* Projects stack */}
         <div className="projects-stack flex flex-col gap-[9rem] mt-12">
-          {/* Project Card 1 */}
-          <a href="/work/fora-da-lata" className="project-card work-card group block">
-            <div className="w-full h-[35vw] mb-6 overflow-hidden">
-              <Image
-                src="/images/fora-da-lata_card.jpg"
-                alt="Fora da Lata Innovation Campaign"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                width={1000}
-                height={1000}
-              />
-            </div>
-            <div className="space-y-2">
-              <span className="inline-block text-[0.875rem] text-[#FF5EC4] font-medium tracking-wide">
-                INNOVATION CAMPAIGN
-              </span>
-              <h3 className="text-[2rem] font-normal text-white leading-[1.2] uppercase">
-                Fora da Lata
-              </h3>
-            </div>
-          </a>
-
-          {/* Project Card 2 */}
-          <a href="/work/edp-challenge" className="project-card work-card group block">
-            <div className="w-full h-[35vw] mb-6 overflow-hidden">
-              <Image
-                src="/images/edp_card.jpg"
-                alt="EDP Challenge Innovation Campaign"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                width={1000}
-                height={1000}
-              />
-            </div>
-            <div className="space-y-2">
-              <span className="inline-block text-[0.875rem] text-[#FF5EC4] font-medium tracking-wide">
-                INNOVATION CAMPAIGN
-              </span>
-              <h3 className="text-[2rem] font-normal text-white leading-[1.2] uppercase">
-                EDP Challenge
-              </h3>
-            </div>
-          </a>
-
-          {/* Project Card 3 */}
-          <a href="/work/sem-parar" className="project-card work-card group block">
-            <div className="w-full h-[35vw] mb-6 overflow-hidden">
-              <Image
-                src="/images/sem-parar_card.jpg"
-                alt="Sem Parar Innovation Challenge"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                width={1000}
-                height={1000}
-              />
-            </div>
-            <div className="space-y-2">
-              <span className="inline-block text-[0.875rem] text-[#FF5EC4] font-medium tracking-wide">
-                INNOVATION CHALLENGE
-              </span>
-              <h3 className="text-[2rem] font-normal text-white leading-[1.2] uppercase">
-                Sem Parar
-              </h3>
-            </div>
-          </a>
+          {projects.map((project) => (
+            <a key={project.id} href={`/work/${project.slug}`} className="project-card work-card group block">
+              <div className="w-full h-[35vw] mb-6 overflow-hidden">
+                <Image
+                  src={project.coverImage || `/images/${project.slug === 'edp-challenge' ? 'edp' : project.slug}_card.jpg`}
+                  alt={`${project.title} ${project.category}`}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  width={1000}
+                  height={1000}
+                />
+              </div>
+              <div className="space-y-2">
+                <ProjectTag
+                  text={project.category}
+                  variant="plain"
+                />
+                <h3 className="text-[2rem] font-normal text-white leading-[1.2] uppercase">
+                  {project.title}
+                </h3>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>

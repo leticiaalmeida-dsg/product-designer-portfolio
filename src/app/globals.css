@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #080808;
 }
 
 @theme inline {
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #080808;
     --foreground: #ededed;
   }
 }
@@ -36,3 +36,23 @@ body {
 }
 
 /* Custom animations now handled via JavaScript in HeroAnimated component */
+
+/* Marquee Animation Styles */
+.marquee-track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-horizontal 20s linear infinite;
+  /* manipulate the speed of the marquee by changing "40s" line above*/
+}
+
+@keyframes marquee-horizontal {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media only screen and (min-width: 992px) {
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+}

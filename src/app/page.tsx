@@ -1,4 +1,4 @@
-import Navigation from "./components/Navigation";
+import { HamburgerMenu as Navigation } from "./components/Navigation";
 import Hero from "./components/Hero";
 import SelectedWork from "./components/SelectedWork";
 import About from "./components/About";

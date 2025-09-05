@@ -5,6 +5,16 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Project metadata for ordering and listing
+export const projectMetadata = {
+  id: 3,
+  title: 'Fora da Lata',
+  category: 'DIGITAL PRODUCTS FOR OPEN INNOVATION PROGRAM',
+  year: 2021,
+  featured: true,
+  slug: 'fora-da-lata'
+};
+
 export default function ForaDaLata() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const iphone1Ref = useRef<HTMLDivElement>(null);

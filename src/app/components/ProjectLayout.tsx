@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import Navigation from './Navigation';
+import { HamburgerMenu as Navigation } from './Navigation';
 import ProjectFooter from './ProjectFooter';
 import Image from 'next/image';
 
