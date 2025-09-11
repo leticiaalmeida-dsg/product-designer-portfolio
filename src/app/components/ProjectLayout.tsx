@@ -24,16 +24,6 @@ export default function ProjectLayout({
   year,
   contributions = []
 }: ProjectLayoutProps) {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <main className="bg-[#080808] min-h-screen">

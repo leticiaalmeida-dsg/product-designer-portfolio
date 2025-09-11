@@ -5,17 +5,16 @@ import { usePathname, useRouter } from 'next/navigation';
 
 declare global {
   interface Window {
-    gsap: any;
+    gsap: typeof import('gsap');
   }
 }
 
 export default function LoadingAnimation() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [_isAnimating, setIsAnimating] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
   const [destinationPage, setDestinationPage] = useState<string>('');
   const pathname = usePathname();
-  const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
   const curtainTopRef = useRef<HTMLDivElement>(null);
   const curtainBottomRef = useRef<HTMLDivElement>(null);
@@ -44,8 +43,9 @@ export default function LoadingAnimation() {
 
   // Listen for navigation events to trigger loading animation
   useEffect(() => {
-    const handleStartLoading = (event: any) => {
-      const destination = event.detail?.destination;
+    const handleStartLoading = (event: Event) => {
+      const customEvent = event as CustomEvent<{ destination: string }>;
+      const destination = customEvent.detail?.destination;
       if (destination) {
         setDestinationPage(destination);
         setIsLoading(true);

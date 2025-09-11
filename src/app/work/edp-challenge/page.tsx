@@ -63,10 +63,6 @@ export default function EDPChallenge() {
         const marketingRect = marketingRef.current.getBoundingClientRect();
         const outcomesRect = outcomesRef.current.getBoundingClientRect();
         
-        // Calculate progress for marketing section (moving up)
-        let marketingProgress = (viewportHeight - marketingRect.top) / (viewportHeight + marketingRect.height);
-        marketingProgress = Math.min(Math.max(marketingProgress, 0), 1);
-        
         // Calculate progress for outcomes section (moving down)
         let outcomesProgress = (viewportHeight - outcomesRect.top) / (viewportHeight + outcomesRect.height);
         outcomesProgress = Math.min(Math.max(outcomesProgress, 0), 1);

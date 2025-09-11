@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -174,9 +175,11 @@ export default function AboutSection() {
 
             {/* Right Side - Profile and Description */}
             <div className="w-[65%] flex items-start gap-6">
-              <img
+              <Image
                 src="/images/me.png"
                 alt="Profile picture"
+                width={80}
+                height={80}
                 className="w-[5rem] h-[5rem] rounded-full object-cover"
               />
               <SplitText

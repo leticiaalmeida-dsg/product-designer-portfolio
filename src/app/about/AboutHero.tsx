@@ -87,7 +87,7 @@ export default function AboutHero() {
                       <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z" fill="#080808"/>
                     </svg>
                   </div>
-                  <span>LET'S MAKE YOUR</span>
+                  <span>LET&apos;S MAKE YOUR</span>
                 </div>
 
                 {/* IDEAS COME TRUE display wrapper */}
@@ -115,7 +115,7 @@ export default function AboutHero() {
             </div>
 
             <div className="subtext-wrapper space-y-2">
-              <p className="text-lg md:text-xl font-normal tracking-wide">I'M A DIGITAL PRODUCT DESIGNER</p>
+              <p className="text-lg md:text-xl font-normal tracking-wide">I&apos;M A DIGITAL PRODUCT DESIGNER</p>
               <p className="text-lg md:text-xl font-normal tracking-wide">BUILDING WITH SPARK, INTENT AND PURPOSE</p>
             </div>
           </div>

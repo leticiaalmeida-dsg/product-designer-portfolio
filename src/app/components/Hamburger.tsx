@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 
 declare global {
   interface Window {
-    gsap: any // eslint-disable-line @typescript-eslint/no-explicit-any
+    gsap: typeof import('gsap'); // eslint-disable-line @typescript-eslint/no-explicit-any
   }
 }
 
