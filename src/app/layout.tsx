@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import LenisScript from "./components/LenisScript";
 import Cursor from "./components/Cursor";
+import LoadingAnimation from "./components/LoadingAnimation";
 
 // Initialize font
 const inter = Inter({ subsets: ["latin"] });
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body suppressHydrationWarning className="antialiased bg-[#080808] text-white">
+        <LoadingAnimation />
         <Cursor />
         {children}
         <LenisScript />

@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #080808;
+  /* Pink color variables */
+  --pink-dark-bg: #FF76A2;  /* Main pink for dark backgrounds */
+  --pink-light-bg: #E4285C; /* Darker pink for light backgrounds */
 }
 
 @theme inline {

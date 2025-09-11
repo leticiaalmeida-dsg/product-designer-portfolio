@@ -125,9 +125,9 @@ export default function ForaDaLata() {
           <div className="flex gap-12">
             {/* Left column - Tags */}
             <div className="w-[35%] text-left">
-              <span className="inline-block text-[0.875rem] text-[#E4285C] font-medium tracking-wide uppercase">
+              <h2 className="text-[0.875rem] text-[var(--pink-light-bg)] font-medium tracking-wide uppercase">
                 OVERVIEW
-              </span>
+              </h2>
             </div>
 
             {/* Right column - Content */}
@@ -148,9 +148,9 @@ export default function ForaDaLata() {
           <div className="flex gap-12 mt-24">
             {/* Left column - Tags */}
             <div className="w-[35%] text-left">
-              <span className="inline-block text-[0.875rem] text-[#E4285C] font-medium tracking-wide uppercase">
+              <h2 className="text-[0.875rem] text-[var(--pink-light-bg)] font-medium tracking-wide uppercase">
                 ROLE
-              </span>
+              </h2>
             </div>
 
             {/* Right column - Content */}
@@ -217,9 +217,9 @@ export default function ForaDaLata() {
             <div className="flex gap-12 mb-24">
               {/* Left column - Tag */}
               <div className="w-[35%] text-left">
-                <span className="inline-block text-[0.875rem] text-[#E4285C] font-medium tracking-wide uppercase">
+                <h2 className="text-[0.875rem] text-[var(--pink-light-bg)] font-medium tracking-wide uppercase">
                   THE CHALLENGE
-                </span>
+                </h2>
               </div>
 
               {/* Right column - Content */}
@@ -310,9 +310,9 @@ export default function ForaDaLata() {
           <div className="flex gap-12">
             {/* Left column - Tags */}
             <div className="w-[35%] text-left">
-              <span className="inline-block text-[0.875rem] text-[#E4285C] font-medium tracking-wide uppercase">
+              <h2 className="text-[0.875rem] text-[var(--pink-light-bg)] font-medium tracking-wide uppercase">
                 THE MARKETING CAMPAIGN
-              </span>
+              </h2>
             </div>
 
             {/* Right column - Content */}
@@ -370,9 +370,9 @@ export default function ForaDaLata() {
           <div className="flex gap-12">
             {/* Left column - Tags */}
             <div className="w-[35%] text-left">
-              <span className="inline-block text-[0.875rem] text-[#E4285C] font-medium tracking-wide uppercase">
+              <h2 className="text-[0.875rem] text-[var(--pink-light-bg)] font-medium tracking-wide uppercase">
                 THE OUTCOMES
-              </span>
+              </h2>
             </div>
 
             {/* Right column - Content */}
@@ -425,14 +425,14 @@ export default function ForaDaLata() {
             className="next-title-wrapper work-card relative flex flex-col items-center justify-center group"
           >
             {/* Next Tag */}
-            <span className="inline-block text-[0.875rem] text-[#FF76A2] font-medium tracking-wide uppercase mb-4">
+            <h2 className="text-[0.875rem] text-[var(--pink-dark-bg)] font-medium tracking-wide uppercase mb-4">
               NEXT PROJECT
-            </span>
+            </h2>
 
             {/* Heading */}
-            <h2 className="text-[5rem] font-normal leading-[1] uppercase transition-opacity duration-250 group-hover:opacity-70">
+            <h3 className="text-[5rem] font-normal leading-[1] uppercase transition-opacity duration-250 group-hover:opacity-70">
               EDP CHALLENGE
-            </h2>
+            </h3>
 
             {/* Image Wrapper */}
             <div className="img-wrapper absolute z-[2] bottom-[-6rem] w-[25rem] h-[6.25rem] overflow-hidden transition-[height] duration-250 group-hover:h-[12.5rem]">

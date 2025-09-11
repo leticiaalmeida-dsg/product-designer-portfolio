@@ -1,8 +1,16 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, createContext, useContext } from 'react';
 //import Lenis from '@studio-freight/lenis';
 import Lenis from 'lenis';
+
+// Create a context to share Lenis instance
+export const LenisContext = createContext<Lenis | null>(null);
+
+export const useLenis = () => {
+  const lenis = useContext(LenisContext);
+  return lenis;
+};
 
 export default function LenisScript() {
   const lenisRef = useRef<Lenis | null>(null);
@@ -36,5 +44,9 @@ export default function LenisScript() {
     };
   }, []);
 
-  return null;
+  return (
+    <LenisContext.Provider value={lenisRef.current}>
+      {null}
+    </LenisContext.Provider>
+  );
 }

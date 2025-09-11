@@ -5,11 +5,11 @@ interface ProjectTagProps {
 }
 
 export default function ProjectTag({ text, variant = 'plain', size = 'sm' }: ProjectTagProps) {
-  const baseClasses = "text-[#FF76A2] uppercase tracking-wide z-20 relative";
+  const baseClasses = "text-[var(--pink-dark-bg)] uppercase tracking-wide z-20 relative";
   
   const variantClasses = {
-    filled: "bg-[#FF76A2] text-white rounded-full border-2 border-white",
-    outline: "bg-transparent border-2 border-[#FF76A2] rounded-full",
+    filled: "bg-[var(--pink-dark-bg)] text-white rounded-full border-2 border-white",
+    outline: "bg-transparent border-2 border-[var(--pink-dark-bg)] rounded-full",
     plain: "bg-transparent"
   };
 

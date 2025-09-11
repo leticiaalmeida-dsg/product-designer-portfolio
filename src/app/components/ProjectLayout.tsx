@@ -44,13 +44,13 @@ export default function ProjectLayout({
         {/* Project Info */}
         <div className="px-[10%]">
           <div className="container mx-auto">
-            <div className="max-w-3xl">
-              <span className="inline-block text-[0.875rem] text-[#FF76A2] font-medium tracking-wide uppercase mb-4">
+            <div className="w-full">
+              <span className="inline-block text-[0.875rem] text-[var(--pink-dark-bg)] font-medium tracking-wide uppercase mb-4">
                 {category}
               </span>
-              <h2 className="text-[5rem] font-normal leading-[1] uppercase">
+              <h1 className="text-[5rem] font-normal leading-[1] uppercase">
                 {title}
-              </h2>
+              </h1>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function ProjectLayout({
             <div className="flex justify-between">
               {/* Client */}
               <div className="w-[15%]">
-                <span className="block text-[0.875rem] text-[#FF76A2] font-medium tracking-wide uppercase mb-2">
+                <span className="block text-[0.875rem] text-[var(--pink-dark-bg)] font-medium tracking-wide uppercase mb-2">
                   CLIENT
                 </span>
                 <span className="block text-base text-white uppercase">
@@ -86,7 +86,7 @@ export default function ProjectLayout({
 
               {/* Year */}
               <div className="w-[15%]">
-                <span className="block text-[0.875rem] text-[#FF76A2] font-medium tracking-wide uppercase mb-2">
+                <span className="block text-[0.875rem] text-[var(--pink-dark-bg)] font-medium tracking-wide uppercase mb-2">
                   YEAR
                 </span>
                 <span className="block text-base text-white uppercase">
@@ -96,13 +96,13 @@ export default function ProjectLayout({
 
               {/* Contributions */}
               <div className="w-[60%]">
-                <span className="block text-[0.875rem] text-[#FF76A2] font-medium tracking-wide uppercase mb-2">
+                <span className="block text-[0.875rem] text-[var(--pink-dark-bg)] font-medium tracking-wide uppercase mb-2">
                   CONTRIBUTIONS
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {contributions.map((contribution, index) => [
                     index > 0 && (
-                      <span key={`arrow-${index}`} className="mx-2 text-[#FF76A2]">
+                      <span key={`arrow-${index}`} className="mx-2 text-[var(--pink-dark-bg)]">
                         ↗
                       </span>
                     ),

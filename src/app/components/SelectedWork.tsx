@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { allProjects } from '@/lib/projects';
 import ProjectTag from './ProjectTag';
@@ -12,29 +14,40 @@ export default function SelectedWork() {
             <h2 className="title text-[6rem] font-normal leading-[1]">SELECTED</h2>
           </div>
           <div className="work-wrapper flex items-center gap-2">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 12 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="inline-block"
-            >
-              <mask id="path-1-inside-1_3001_7" fill="white">
-                <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"/>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="path-1-inside-1_3248_5368" fill="white">
+                <path d="M20.007 6.81607L2.82306 24L0 21.1769L17.1819 3.99301H2.03843V0H24V21.9616H20.007V6.81607Z"/>
               </mask>
-              <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z" fill="white"/>
-              <path d="M10.0035 3.40804H13.0035V-3.83461L7.88217 1.28672L10.0035 3.40804ZM1.41153 12L-0.709788 14.1213L1.41153 16.2426L3.53285 14.1213L1.41153 12ZM0 10.5885L-2.12144 8.46727L-4.24252 10.5886L-2.12132 12.7098L0 10.5885ZM8.59096 1.99651L10.7124 4.1177L15.833 -1.00349L8.59096 -1.00349V1.99651ZM1.01922 1.99651H-1.98078V4.99651H1.01922V1.99651ZM1.01922 0V-3H-1.98078V0H1.01922ZM12 0H15V-3H12V0ZM12 10.9808V13.9808H15V10.9808H12ZM10.0035 10.9808H7.00349V13.9808H10.0035V10.9808ZM10.0035 3.40804L7.88217 1.28672L-0.70979 9.87868L1.41153 12L3.53285 14.1213L12.1248 5.52936L10.0035 3.40804ZM1.41153 12L3.53285 9.87868L2.12132 8.46715L0 10.5885L-2.12132 12.7098L-0.709788 14.1213L1.41153 12ZM0 10.5885L2.12144 12.7097L10.7124 4.1177L8.59096 1.99651L6.46952 -0.124691L-2.12144 8.46727L0 10.5885ZM8.59096 1.99651V-1.00349H1.01922V1.99651V4.99651H8.59096V1.99651ZM1.01922 1.99651H4.01922V0H1.01922H-1.98078V1.99651H1.01922ZM1.01922 0V3H12V0V-3H1.01922V0ZM12 0H9V10.9808H12H15V0H12ZM12 10.9808V7.98078H10.0035V10.9808V13.9808H12V10.9808ZM10.0035 10.9808H13.0035V3.40804H10.0035H7.00349V10.9808H10.0035Z" fill="#FF5EC4" mask="url(#path-1-inside-1_3001_7)"/>
+              <path d="M20.007 6.81607L2.82306 24L0 21.1769L17.1819 3.99301H2.03843V0H24V21.9616H20.007V6.81607Z" fill="#FF76A2"/>
+              <path d="M20.007 6.81607H33.3125V-25.3062L10.5986 -2.59233L20.007 6.81607ZM2.82306 24L-6.58534 33.4084L2.82307 42.8168L12.2315 33.4084L2.82306 24ZM0 21.1769L-9.40895 11.7691L-18.8163 21.1775L-9.4084 30.5854L0 21.1769ZM17.1819 3.99301L26.5909 13.4009L49.3016 -9.31248H17.1819V3.99301ZM2.03843 3.99301H-11.2671V17.2985H2.03843V3.99301ZM2.03843 0V-13.3055H-11.2671V0H2.03843ZM24 0H37.3055V-13.3055H24V0ZM24 21.9616V35.2671H37.3055V21.9616H24ZM20.007 21.9616H6.70149V35.2671H20.007V21.9616ZM20.007 6.81607L10.5986 -2.59233L-6.58535 14.5916L2.82306 24L12.2315 33.4084L29.4154 16.2245L20.007 6.81607ZM2.82306 24L12.2315 14.5916L9.4084 11.7685L0 21.1769L-9.4084 30.5854L-6.58534 33.4084L2.82306 24ZM0 21.1769L9.40895 30.5848L26.5909 13.4009L17.1819 3.99301L7.77297 -5.41485L-9.40895 11.7691L0 21.1769ZM17.1819 3.99301V-9.31248H2.03843V3.99301V17.2985H17.1819V3.99301ZM2.03843 3.99301H15.3439V0H2.03843H-11.2671V3.99301H2.03843ZM2.03843 0V13.3055H24V0V-13.3055H2.03843V0ZM24 0H10.6945V21.9616H24H37.3055V0H24ZM24 21.9616V8.65607H20.007V21.9616V35.2671H24V21.9616ZM20.007 21.9616H33.3125V6.81607H20.007H6.70149V21.9616H20.007Z" fill="#FF76A2" mask="url(#path-1-inside-1_3248_5368)"/>
             </svg>
             <h2 className="title text-[6rem] font-normal leading-[1]">WORK</h2>
-            <span className="count text-sm text-[#FF5EC4]">(03)</span>
+            <span className="count text-sm text-[var(--pink-dark-bg)]">(03)</span>
           </div>
         </div>
 
         {/* Projects stack */}
         <div className="projects-stack flex flex-col gap-[9rem] mt-12">
           {projects.map((project) => (
-            <a key={project.id} href={`/work/${project.slug}`} className="project-card work-card group block">
+            <button
+              key={project.id}
+              onClick={(e) => {
+                e.preventDefault();
+                // Trigger loading animation with destination page
+                if (typeof window !== 'undefined') {
+                  const event = new CustomEvent('startLoadingAnimation', {
+                    detail: { destination: `/work/${project.slug}` }
+                  });
+                  window.dispatchEvent(event);
+
+                  // Small delay to allow animation to start, then navigate
+                  setTimeout(() => {
+                    window.location.href = `/work/${project.slug}`;
+                  }, 100);
+                }
+              }}
+              className="project-card work-card group block text-left w-full"
+            >
               <div className="w-full h-[35vw] mb-6 overflow-hidden">
                 <Image
                   src={project.coverImage || `/images/${project.slug === 'edp-challenge' ? 'edp' : project.slug}_card.jpg`}
@@ -53,7 +66,7 @@ export default function SelectedWork() {
                   {project.title}
                 </h3>
               </div>
-            </a>
+            </button>
           ))}
         </div>
       </div>

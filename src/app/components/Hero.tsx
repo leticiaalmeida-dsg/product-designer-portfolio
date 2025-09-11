@@ -54,8 +54,8 @@ export default function Hero() {
   // Calculate position transforms based on Webflow settings
   const getProductTransform = () => {
     // starts at x: 15%, ends at x: -15%
-    const startX = 15;
-    const endX = -15;
+    const startX = 24;
+    const endX = -24;
     return startX + (endX - startX) * progress;
   };
 
@@ -78,7 +78,7 @@ export default function Hero() {
           <div className="text-center w-full">
             {/* Display Wrapper - 80% of section container */}
             <div className="w-[80%] mx-auto mb-16">
-              <h1 className="text-[15vw] md:text-[12vw] lg:text-[12vw] font-normal leading-[0.8] tracking-tight">
+              <h1 className="display text-[15vw] md:text-[12vw] lg:text-[12vw] font-normal leading-[0.8] tracking-tight">
                 {/* PRODUCT display wrapper */}
                 <div 
                   className="flex items-center justify-center gap-4 mb-4"
@@ -95,7 +95,7 @@ export default function Hero() {
                     xmlns="http://www.w3.org/2000/svg"
                     className="inline-block"
                   >
-                    <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z" fill="#FF76A2"/>
+                    <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z" fill="var(--pink-dark-bg)"/>
                   </svg>
                   <span>PRODUCT</span>
                 </div>
@@ -116,7 +116,7 @@ export default function Hero() {
                       fill="none" 
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path d="M62.9648 1.03516V57.5283H54.3877V15.6768L52.6201 17.4443L7.52832 62.5352L1.46387 56.4707L46.5508 11.3799L48.3184 9.6123H6.47168V1.03516H62.9648Z" fill="#FF76A2" stroke="#FF76A2" strokeWidth="2.07093"/>
+                      <path d="M62.9648 1.03516V57.5283H54.3877V15.6768L52.6201 17.4443L7.52832 62.5352L1.46387 56.4707L46.5508 11.3799L48.3184 9.6123H6.47168V1.03516H62.9648Z" fill="var(--pink-dark-bg)" stroke="var(--pink-dark-bg)" strokeWidth="2.07093"/>
                     </svg>
                   </div>
                   <span className="block">DESIGNER</span>
