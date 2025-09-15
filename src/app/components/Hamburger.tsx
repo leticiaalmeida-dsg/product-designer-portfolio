@@ -211,7 +211,7 @@ export function HamburgerMenu({ className }: HamburgerMenuProps) {
 
       <div
         ref={menuRef}
-        className="fixed top-4 right-4 w-full max-w-80 sm:w-80 rounded-3xl z-40 p-8 transform scale-75 opacity-0 safe-area-inset-top safe-area-inset-right"
+        className="fixed top-4 right-4 w-full sm:w-80 rounded-3xl z-40 p-8 transform scale-75 opacity-0 safe-area-inset-top safe-area-inset-right"
         style={{
           backgroundColor: "#FF76A2",
           pointerEvents: isOpen ? "auto" : "none",

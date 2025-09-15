@@ -102,38 +102,36 @@ export default function SemParar() {
         "WORDPRESS DEVELOPMENT"
       ]}
     >
-      <div className="px-[10%] pt-48 pb-24">
-        <div className="container mx-auto">
-          <div className="flex gap-12">
+      <div className="pt-48 md:pt-36 lg:pt-40 xl:pt-44 pb-48 md:pb-24 lg:pb-28 xl:pb-32">
+        <div className="container">
+          <div className="content-layout">
             {/* Left column - Tags */}
-            <div className="w-[35%] text-left">
+            <div className="w-full md:w-[35%] text-left">
               <h2 className="text-[0.875rem] text-[var(--pink-light-bg)] font-medium tracking-wide uppercase">
                 OVERVIEW
               </h2>
             </div>
-
-            {/* Right column - Content */}
-            <div className="w-[65%]">
-              <p className="text-[1.13rem] leading-relaxed text-[#080808] mb-12">
+            <div className="w-full md:w-[65%]">
+              <p className="text-base md:text-lg leading-relaxed text-[#080808] mb-12">
                 The Sem Parar Challenge is a bold Brazilian initiative created by Sem Parar — a leader in urban mobility. More than just a program, it&apos;s a collaborative hub designed to connect innovators from high-potential startups, top universities, and industry-leading companies.
               </p>
-              <p className="text-[1.13rem] leading-relaxed text-[#080808]">
+              <p className="text-base md:text-lg leading-relaxed text-[#080808]">
                 By sparking cross-sector collaboration, the challenge breaks traditional boundaries and fuels a shared journey toward building the future of urban mobility.
               </p>
             </div>
           </div>
 
-          <div className="flex gap-12 mt-24">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-12 mt-24">
             {/* Left column - Tags */}
-            <div className="w-[35%] text-left">
+            <div className="w-full md:w-[35%] text-left">
               <h2 className="text-[0.875rem] text-[var(--pink-light-bg)] font-medium tracking-wide uppercase">
                 ROLE
               </h2>
             </div>
 
             {/* Right column - Content */}
-            <div className="w-[65%]">
-              <p className="text-[1.13rem] leading-relaxed text-[#080808]">
+            <div className="w-full md:w-[65%]">
+              <p className="text-base md:text-lg leading-relaxed text-[#080808]">
                 As a freelance digital product designer, I was brought in to extend and apply an existing brand identity across web and social in just 10 days. Beyond creating a cohesive visual system, I designed a website layout optimized for both usability and implementation — carefully adapting it to the technical constraints of their chosen platform. By combining design and development thinking, I helped the team launch a consistent, user-friendly experience under a tight deadline.
               </p>
             </div>
@@ -244,20 +242,18 @@ export default function SemParar() {
 
       {/* Challenge Section */}
       <div className="bg-[#FFFFFF] mt-24">
-        <div className="px-[10%] py-48">
-          <div className="container mx-auto">
+        <div className="pt-48 pb-48">
+          <div className="container">
             {/* Text Content */}
-            <div className="flex gap-12 mb-24">
+            <div className="content-layout mb-24">
               {/* Left column - Tag */}
-              <div className="w-[35%] text-left">
+              <div className="w-full md:w-[35%] text-left">
                 <h2 className="text-[0.875rem] text-[var(--pink-light-bg)] font-medium tracking-wide uppercase">
                   THE CHALLENGE
                 </h2>
               </div>
-
-              {/* Right column - Content */}
-              <div className="w-[65%]">
-                <p className="text-[1.13rem] leading-relaxed text-[#080808]">
+              <div className="w-full md:w-[65%]">
+                <p className="text-base md:text-lg leading-relaxed text-[#080808]">
                   With two distinct challenges running in parallel, clarity and segmentation were key. I worked from a detailed brief provided by the innovation consultancy leading the initiative, which outlined the target audiences and key messaging goals. Our mission was to spark interest among both high-potential startups and innovation-driven students — ensuring each group felt seen, inspired, and motivated to join. I focused on tailoring the communication to resonate with both profiles while keeping the overall experience cohesive and aligned with the project&apos;s innovation-forward positioning.
                 </p>
               </div>
@@ -277,38 +273,44 @@ export default function SemParar() {
             </div>
 
             {/* iPhones Section */}
-            <div ref={wrapperRef} className="iphones-wrapper flex justify-between items-start w-full relative mt-24">
-              {/* iPhone 1 */}
-              <div ref={iphone1Ref} className="iphone relative w-[24%] pt-[48.92%] transition-all duration-[50ms] ease-linear will-change-transform">
-                <Image
-                  src="/images/Scroll-section_Sem-Parar_01.png"
-                  alt="Sem Parar mobile interface"
-                  className="absolute top-0 left-0 w-full h-full object-cover"
-                  width={1000}
-                  height={1000}
-                />
+            <div ref={wrapperRef} className="iphones-wrapper flex flex-col md:flex-row w-full relative mt-24 gap-8 md:gap-0">
+              {/* iPhone 1 Container */}
+              <div className="w-full md:w-1/3 flex justify-center items-center">
+                <div ref={iphone1Ref} className="iphone relative w-[40%] md:w-[80%] pt-[81.53%] md:pt-[163.06%] transition-all duration-[50ms] ease-linear will-change-transform">
+                  <Image
+                    src="/images/Scroll-section_Sem-Parar_01.png"
+                    alt="Sem Parar mobile interface"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    width={1000}
+                    height={1000}
+                  />
+                </div>
               </div>
 
-              {/* iPhone 2 */}
-              <div ref={iphone2Ref} className="iphone relative w-[24%] pt-[48.92%] transition-all duration-[50ms] ease-linear will-change-transform">
-                <Image
-                  src="/images/Scroll-section_Sem-Parar_02.png"
-                  alt="Sem Parar mobile interface"
-                  className="absolute top-0 left-0 w-full h-full object-cover"
-                  width={1000}
-                  height={1000}
-                />
+              {/* iPhone 2 Container */}
+              <div className="w-full md:w-1/3 flex justify-center items-center">
+                <div ref={iphone2Ref} className="iphone relative w-[40%] md:w-[80%] pt-[81.53%] md:pt-[163.06%] transition-all duration-[50ms] ease-linear will-change-transform">
+                  <Image
+                    src="/images/Scroll-section_Sem-Parar_02.png"
+                    alt="Sem Parar mobile interface"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    width={1000}
+                    height={1000}
+                  />
+                </div>
               </div>
 
-              {/* iPhone 3 */}
-              <div ref={iphone3Ref} className="iphone relative w-[24%] pt-[48.92%] transition-all duration-[50ms] ease-linear will-change-transform">
-                <Image
-                  src="/images/Scroll-section_Sem-Parar_03.png"
-                  alt="Sem Parar mobile interface"
-                  className="absolute top-0 left-0 w-full h-full object-cover"
-                  width={1000}
-                  height={1000}
-                />
+              {/* iPhone 3 Container */}
+              <div className="w-full md:w-1/3 flex justify-center items-center">
+                <div ref={iphone3Ref} className="iphone relative w-[40%] md:w-[80%] pt-[81.53%] md:pt-[163.06%] transition-all duration-[50ms] ease-linear will-change-transform">
+                  <Image
+                    src="/images/Scroll-section_Sem-Parar_03.png"
+                    alt="Sem Parar mobile interface"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
+                    width={1000}
+                    height={1000}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -316,57 +318,62 @@ export default function SemParar() {
       </div>
 
       {/* Marketing Campaign Section */}
-      <div ref={marketingRef} className="bg-[#EAEAEB] px-[10%] pt-48 pb-72 transition-transform duration-[50ms] ease-linear will-change-transform">
-        <div className="container mx-auto">
-          <div className="flex gap-12">
+      <div ref={marketingRef} className="bg-[#EAEAEB] pt-48 pb-48 md:pb-72 transition-transform duration-[50ms] ease-linear will-change-transform">
+        <div className="container">
+          <div className="content-layout">
             {/* Left column - Tags */}
-            <div className="w-[35%] text-left">
+            <div className="w-full md:w-[35%] text-left">
               <h2 className="text-[0.875rem] text-[var(--pink-light-bg)] font-medium tracking-wide uppercase">
                 THE MARKETING CAMPAIGN
               </h2>
             </div>
-
-            {/* Right column - Content */}
-            <div className="w-[65%]">
-              <p className="text-[1.13rem] leading-relaxed text-[#080808]">
+            <div className="w-full md:w-[65%]">
+              <p className="text-base md:text-lg leading-relaxed text-[#080808]">
                 We crafted a sharp, targeted marketing strategy to reach the right startups over a focused campaign. Our content plan combined real success stories, clear messaging around program benefits, and a spotlight on Sem Parar&apos;s commitment to innovation in urban mobility. The campaign ran across multiple platforms, generating strong engagement and helping connect with promising mobility-focused startups.
               </p>
             </div>
           </div>
 
           {/* Instagram Posts Section */}
-          <div ref={postsWrapperRef} className="posts-wrapper flex justify-between items-start w-full relative mt-4">
-            {/* Post 1 */}
-            <div ref={post1Ref} className="post is-1 relative w-[30%] pt-[45.85%] transition-transform duration-[50ms] ease-linear will-change-transform bg-white rounded-2xl overflow-hidden shadow-lg" style={{ transform: 'translateY(120px)' }}>
-              <Image
-                src="/images/Social_Sem-Parar-01.jpg"
-                alt="Sem Parar Instagram post"
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                width={1000}
-                height={1000}
-              />
+          <div ref={postsWrapperRef} className="posts-wrapper flex flex-col md:flex-row w-full relative mt-4 gap-0">
+            {/* Post 1 Container */}
+            <div className="w-full md:w-1/3 flex justify-center items-center">
+
+              <div ref={post1Ref} className="post is-1 relative w-[60%] md:w-[80%] pt-[87.7%] md:pt-[116.93%] transition-transform duration-[50ms] ease-linear will-change-transform bg-white overflow-hidden shadow-lg">
+                <Image
+                  src="/images/Social_Sem-Parar-01.jpg"
+                  alt="Sem Parar Instagram post"
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
+                />
+              </div>
             </div>
 
-            {/* Post 2 */}
-            <div ref={post2Ref} className="post is-2 relative w-[30%] pt-[45.85%] transition-transform duration-[50ms] ease-linear will-change-transform bg-white rounded-2xl overflow-hidden shadow-lg" style={{ transform: 'translateY(180px)' }}>
-              <Image
-                src="/images/Social_Sem-Parar-02.jpg"
-                alt="Sem Parar Instagram post"
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                width={1000}
-                height={1000}
-              />
+            {/* Post 2 Container */}
+            <div className="w-full md:w-1/3 flex justify-center items-center">
+              <div ref={post2Ref} className="post is-2 relative w-[60%] md:w-[80%] pt-[87.7%] md:pt-[116.93%] transition-transform duration-[50ms] ease-linear will-change-transform bg-white overflow-hidden shadow-lg">
+                <Image
+                  src="/images/Social_Sem-Parar-02.jpg"
+                  alt="Sem Parar Instagram post"
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
+                />
+              </div>
             </div>
 
-            {/* Post 3 */}
-            <div ref={post3Ref} className="post is-3 relative w-[30%] pt-[45.85%] transition-transform duration-[50ms] ease-linear will-change-transform bg-white rounded-2xl overflow-hidden shadow-lg" style={{ transform: 'translateY(240px)' }}>
-              <Image
-                src="/images/Social_Sem-Parar-03.jpg"
-                alt="Sem Parar Instagram post"
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                width={1000}
-                height={1000}
-              />
+            {/* Post 3 Container */}
+            <div className="w-full md:w-1/3 flex justify-center items-center">
+              <div ref={post3Ref} className="post is-3 relative w-[60%] md:w-[80%] pt-[87.7%] md:pt-[116.93%] transition-transform duration-[50ms] ease-linear will-change-transform bg-white overflow-hidden shadow-lg">
+                <Image
+                  src="/images/Social_Sem-Parar-03.jpg"
+                  alt="Sem Parar Instagram post"
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  width={1000}
+                  height={1000}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -374,23 +381,19 @@ export default function SemParar() {
 
 
       {/* Next Project Section */}
-      <div className="bg-[#080808] text-white">
-        <div className="container mx-auto px-[10%] pt-48">
+      <div className="bg-[#080808] text-white pb-16">
+        <div className="container pt-48 md:pt-32 lg:pt-36 xl:pt-40">
           <Link
             href="/work/edp-challenge"
-            className="next-title-wrapper work-card relative flex flex-col items-center justify-center group"
+            className="next-title-wrapper work-card relative center-vertical-layout group"
           >
             {/* Next Tag */}
             <h2 className="text-[0.875rem] text-[var(--pink-dark-bg)] font-medium tracking-wide uppercase mb-4">
               NEXT PROJECT
             </h2>
-
-            {/* Heading */}
-            <h3 className="text-[5rem] font-normal leading-[1] uppercase transition-opacity duration-250 group-hover:opacity-70">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-[5rem] font-normal leading-[1] uppercase transition-opacity duration-250 group-hover:opacity-70">
               EDP CHALLENGE
             </h3>
-
-            {/* Image Wrapper */}
             <div className="img-wrapper absolute z-[2] bottom-[-6rem] w-[25rem] h-[6.25rem] overflow-hidden transition-[height] duration-250 group-hover:h-[12.5rem]">
               <Image
                 src="/images/edp_card.jpg"

@@ -58,10 +58,10 @@ export default function ProjectFooter() {
   };
 
   return (
-    <footer ref={footerRef} className="bg-[#080808] text-white px-[10%] pt-16 pb-12">
-      <div className="container mx-auto">
-        {/* Main footer content - flexbox space-between */}
-        <div className="flex justify-between items-start mb-16">
+    <footer ref={footerRef} className="bg-[#080808] text-white pt-24 md:pt-32 lg:pt-36 xl:pt-40 pb-12 md:pb-20 lg:pb-24">
+      <div className="container">
+        {/* Main footer content - space between layout */}
+        <div className="space-between-layout mb-16">
           {/* Left side - Let's work together */}
           <div className="flex-1">
             <div 
@@ -71,9 +71,9 @@ export default function ProjectFooter() {
                 transition: 'transform 0.3s ease'
               }}
             >
-              <h2 className="text-[2rem] font-normal leading-[1]">LET&apos;S WORK</h2>
+              <h2 className="second-footer_heading font-normal leading-[1]">LET&apos;S WORK</h2>
             </div>
-            <div 
+            <div
               className="flex items-center gap-4 mt-4"
               style={{
                 transform: `translateX(${getTogetherTransform()}%)`,
@@ -87,7 +87,7 @@ export default function ProjectFooter() {
                 viewBox="0 0 12 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-[var(--pink-dark-bg)]"
+                className="text-[var(--pink-dark-bg)] w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6"
               >
                 <mask id="path-1-footer" fill="white">
                   <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"/>
@@ -95,7 +95,7 @@ export default function ProjectFooter() {
                 <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z" fill="white"/>
                 <path d="M10.0035 3.40804H13.0035V-3.83461L7.88217 1.28672L10.0035 3.40804ZM1.41153 12L-0.709788 14.1213L1.41153 16.2426L3.53285 14.1213L1.41153 12ZM0 10.5885L-2.12144 8.46727L-4.24252 10.5886L-2.12132 12.7098L0 10.5885ZM8.59096 1.99651L10.7124 4.1177L15.833 -1.00349L8.59096 -1.00349V1.99651ZM1.01922 1.99651H-1.98078V4.99651H1.01922V1.99651ZM1.01922 0V-3H-1.98078V0H1.01922ZM12 0H15V-3H12V0ZM12 10.9808V13.9808H15V10.9808H12ZM10.0035 10.9808H7.00349V13.9808H10.0035V10.9808ZM10.0035 3.40804L7.88217 1.28672L-0.70979 9.87868L1.41153 12L3.53285 14.1213L12.1248 5.52936L10.0035 3.40804ZM1.41153 12L3.53285 9.87868L2.12132 8.46715L0 10.5885L-2.12132 12.7098L-0.709788 14.1213L1.41153 12ZM0 10.5885L2.12144 12.7097L10.7124 4.1177L8.59096 1.99651L6.46952 -0.124691L-2.12144 8.46727L0 10.5885ZM8.59096 1.99651V-1.00349H1.01922V1.99651V4.99651H8.59096V1.99651ZM1.01922 1.99651H4.01922V0H1.01922H-1.98078V1.99651H1.01922ZM1.01922 0V3H12V0V-3H1.01922V0ZM12 0H9V10.9808H12H15V0H12ZM12 10.9808V7.98078H10.0035V10.9808V13.9808H12V10.9808ZM10.0035 10.9808H13.0035V3.40804H10.0035H7.00349V10.9808H10.0035Z" fill="var(--pink-dark-bg)" mask="url(#path-1-footer)"/>
               </svg>
-              <h2 className="text-[2rem] font-normal leading-[1]">TOGETHER</h2>
+              <h2 className="second-footer_heading font-normal leading-[1]">TOGETHER</h2>
             </div>
           </div>
 
@@ -114,7 +114,7 @@ export default function ProjectFooter() {
 
             {/* Socials */}
             <div className="mb-12">
-              <div className="flex items-center justify-end gap-6">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-4 md:gap-6">
                 <a href="#" className="text-white hover:text-[var(--pink-dark-bg)] transition-colors">Linkedin</a>
                 <a href="#" className="text-white hover:text-[var(--pink-dark-bg)] transition-colors">Instagram</a>
               </div>

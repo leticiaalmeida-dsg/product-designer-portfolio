@@ -54,33 +54,34 @@ export default function Hero() {
   // Calculate position transforms based on Webflow settings
   const getProductTransform = () => {
     // starts at x: 15%, ends at x: -15%
-    const startX = 24;
-    const endX = -24;
+    const startX = 20;
+    const endX = -20;
     return startX + (endX - startX) * progress;
   };
 
   const getDesignerTransform = () => {
     // starts at x: -15%, ends at x: 15%
-    const startX = -15;
-    const endX = 15;
+    const startX = -12;
+    const endX = 12;
     return startX + (endX - startX) * progress;
   };
 
   return (
-    <section 
+    <section
       ref={heroRef}
-      className="bg-[#080808] text-white min-h-screen py-48 px-[10%] pb-20"
+      className="bg-[#080808] text-white py-24 md:py-36 lg:py-40 xl:py-44"
     >
-      {/* Section Container - 80% of page width */}
-      <div className="container mx-auto w-[80%]">
-        <div className="hero_wrapper flex flex-col items-center gap-12">
+      {/* Section Container - pure horizontal alignment */}
+      <div className="container">
+        <div className="w-full">
+          <div className="center-vertical-layout">
           {/* Text Content */}
           <div className="text-center w-full">
             {/* Display Wrapper - 80% of section container */}
-            <div className="w-[80%] mx-auto mb-16">
-              <h1 className="display text-[15vw] md:text-[12vw] lg:text-[12vw] font-normal leading-[0.8] tracking-tight">
+            <div className="w-full mb-16">
+              <h1 className="display text-[8vw] md:text-[9vw] lg:text-[10vw] xl:text-[12vw] font-normal leading-[0.8] tracking-tight">
                 {/* PRODUCT display wrapper */}
-                <div 
+                <div
                   className="flex items-center justify-center gap-4 mb-4"
                   style={{
                     transform: `translateX(${getProductTransform()}%)`,
@@ -88,33 +89,34 @@ export default function Hero() {
                   }}
                 >
                                       <svg
-                    width="48"
-                    height="48"
+                    width="24"
+                    height="24"
                     viewBox="0 0 12 12"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="inline-block"
+                    className="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 inline-block"
                   >
-                    <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z" fill="var(--pink-dark-bg)"/>
+                    <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z" fill="var(--background)"/>
                   </svg>
                   <span>PRODUCT</span>
                 </div>
 
                 {/* DESIGNER display wrapper */}
-                <div 
+                <div
                   className="flex items-center justify-center gap-4"
                   style={{
                     transform: `translateX(${getDesignerTransform()}%)`,
                     willChange: 'transform'
                   }}
                 >
-                  <div className="w-[4rem] h-[4rem] relative z-10 flex items-center justify-center">
-                    <svg 
-                      width="64" 
-                      height="64" 
-                      viewBox="0 0 64 64" 
-                      fill="none" 
+                  <div className="w-4 h-4 md:w-6 md:h-6 lg:w-8 lg:h-8 xl:w-10 xl:h-10 relative z-10 flex items-center justify-center">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 64 64"
+                      fill="none"
                       xmlns="http://www.w3.org/2000/svg"
+                      className="w-full h-full"
                     >
                       <path d="M62.9648 1.03516V57.5283H54.3877V15.6768L52.6201 17.4443L7.52832 62.5352L1.46387 56.4707L46.5508 11.3799L48.3184 9.6123H6.47168V1.03516H62.9648Z" fill="var(--pink-dark-bg)" stroke="var(--pink-dark-bg)" strokeWidth="2.07093"/>
                     </svg>
@@ -126,8 +128,8 @@ export default function Hero() {
 
                           {/* Subtext */}
               <div className="subtext-wrapper space-y-2">
-                <p className="text-lg md:text-xl font-normal tracking-wide">BUILDING BRANDS WITH PURPOSE</p>
-                <p className="text-lg md:text-xl font-normal tracking-wide">PRODUCTS AND EXPERIENCES</p>
+                <p className="text-sm md:text-base lg:text-lg font-normal tracking-wide">BUILDING BRANDS WITH PURPOSE</p>
+                <p className="text-sm md:text-base lg:text-lg font-normal tracking-wide">PRODUCTS AND EXPERIENCES</p>
               </div>
           </div>
 
@@ -140,6 +142,7 @@ export default function Hero() {
               width={1000}
               height={1000}
             />
+          </div>
           </div>
         </div>
       </div>

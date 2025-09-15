@@ -28,26 +28,21 @@ export default function ProjectLayout({
   return (
     <main className="bg-[#080808] min-h-screen">
       <Navigation />
-      
       {/* Hero Section */}
       <section className="bg-[#080808] text-white pt-48 pb-48">
         {/* Project Info */}
-        <div className="px-[10%]">
-          <div className="container mx-auto">
-            <div className="w-full">
+        <div className="container">
+          <div className="w-full">
               <span className="inline-block text-[0.875rem] text-[var(--pink-dark-bg)] font-medium tracking-wide uppercase mb-4">
                 {category}
               </span>
-              <h1 className="text-[5rem] font-normal leading-[1] uppercase">
+              <h1 className="text-[2.5rem] md:text-5xl lg:text-6xl xl:text-[5rem] font-normal leading-[1] uppercase">
                 {title}
               </h1>
-            </div>
           </div>
         </div>
-
-        {/* Hero Image */}
-        <div className="w-full px-[10%] mt-12">
-          <div className="container mx-auto">
+        <div className="w-full mt-12">
+          <div className="container">
             <div className="w-full h-[35vw]">
               <Image
                 src={coverImage}
@@ -59,11 +54,9 @@ export default function ProjectLayout({
             </div>
           </div>
         </div>
-
-        {/* Project Details */}
-        <div className="px-[10%] mt-12">
-          <div className="container mx-auto">
-            <div className="flex justify-between">
+        <div className="mt-12">
+          <div className="container">
+            <div className="space-between-layout">
               {/* Client */}
               <div className="w-[15%]">
                 <span className="block text-[0.875rem] text-[var(--pink-dark-bg)] font-medium tracking-wide uppercase mb-2">
@@ -83,8 +76,6 @@ export default function ProjectLayout({
                   {year}
                 </span>
               </div>
-
-              {/* Contributions */}
               <div className="w-[60%]">
                 <span className="block text-[0.875rem] text-[var(--pink-dark-bg)] font-medium tracking-wide uppercase mb-2">
                   CONTRIBUTIONS
@@ -106,8 +97,6 @@ export default function ProjectLayout({
           </div>
         </div>
       </section>
-
-      {/* Project Content */}
       <div className="bg-white text-[#080808]">
         {children}
       </div>

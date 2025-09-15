@@ -40,6 +40,218 @@ body {
 
 /* Custom animations now handled via JavaScript in HeroAnimated component */
 
+/* ==========================================================================
+   Container Utility System - Single Responsibility Architecture
+   ==========================================================================
+
+   This system separates horizontal alignment from layout logic for cleaner,
+   more maintainable CSS architecture.
+
+   USAGE PRINCIPLES:
+   - Containers handle ONLY horizontal alignment (margins + responsive padding)
+   - Layout logic (flex, gaps, spacing) lives in separate wrapper classes
+   - Each class has one clear, single responsibility
+   - Padding uses responsive viewport units (6vw → 7.5vw → 8vw → 9vw) for optimal spacing across screen sizes
+
+   VERTICAL SPACING SYSTEM (Webflow-Inspired):
+   - Section Spacing: 160px → 144px → 128px → 112px (hero → content → footer)
+   - Component Spacing: 64px → 48px → 40px → 32px (major → minor → tight)
+   - Element Spacing: 24px → 20px → 16px → 12px (paragraphs → labels → micro)
+
+   BREAKPOINTS:
+   - Mobile: Default (320px+)
+   - Tablet: md: (768px+)
+   - Desktop: lg: (1024px+)
+   - Large Desktop: xl: (1280px+)
+   - Extra Large: 2xl: (1536px+)
+
+   ========================================================================== */
+
+/* Base container - pure horizontal alignment with responsive viewport-based padding */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+/* Medium screens - tighter padding for better content density */
+@media (min-width: 768px) {
+  .container {
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
+}
+
+/* Large screens - balanced padding for optimal readability */
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+}
+
+/* Extra large screens - prevent excessive white space */
+@media (min-width: 1440px) {
+  .container {
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+}
+
+
+/* Layout wrapper classes - separate from containers */
+
+/* Content Layout: For left/right column layouts (tag + content) */
+.content-layout {
+  display: flex;
+  gap: 3rem; /* 48px - standard content gap */
+}
+
+/* Space Between Layout: For elements that need to be spread apart */
+.space-between-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT CLASSES - Webflow-Inspired Spacing System
+   ========================================================================== */
+
+/* Center Vertical Layout: For vertically centered content stacks */
+.center-vertical-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* 24px - mobile */
+}
+
+@media (min-width: 768px) {
+  .center-vertical-layout {
+    gap: 2rem; /* 32px - tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .center-vertical-layout {
+    gap: 2.5rem; /* 40px - desktop */
+  }
+}
+
+@media (min-width: 1280px) {
+  .center-vertical-layout {
+    gap: 3rem; /* 48px - large desktop */
+  }
+}
+
+/* Compact Vertical Layout: For tight vertical spacing */
+.compact-vertical-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* 12px - mobile */
+}
+
+@media (min-width: 768px) {
+  .compact-vertical-layout {
+    gap: 1rem; /* 16px - tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .compact-vertical-layout {
+    gap: 1.25rem; /* 20px - desktop */
+  }
+}
+
+@media (min-width: 1280px) {
+  .compact-vertical-layout {
+    gap: 1.5rem; /* 24px - large desktop */
+  }
+}
+
+/* Vertical Layout: For standard vertical content stacks */
+.vertical-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* 32px - mobile */
+}
+
+@media (min-width: 768px) {
+  .vertical-layout {
+    gap: 2.5rem; /* 40px - tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .vertical-layout {
+    gap: 3rem; /* 48px - desktop */
+  }
+}
+
+@media (min-width: 1280px) {
+  .vertical-layout {
+    gap: 3.5rem; /* 56px - large desktop */
+  }
+}
+
+/* Content Layout: For left/right column layouts */
+.content-layout {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 2rem; /* 32px - mobile */
+}
+
+@media (min-width: 768px) {
+  .content-layout {
+    flex-direction: row; /* Horizontal layout on desktop */
+    gap: 2.5rem; /* 40px - tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .content-layout {
+    gap: 3rem; /* 48px - desktop */
+  }
+}
+
+/* Space Between Layout: For elements that need to be spread apart */
+.space-between-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem; /* 16px - mobile */
+}
+
+@media (min-width: 768px) {
+  .space-between-layout {
+    gap: 1.5rem; /* 24px - tablet+ */
+  }
+}
+
+@media (min-width: 1024px) {
+  .space-between-layout {
+    gap: 2rem; /* 32px - desktop+ */
+  }
+}
+
+/* ==========================================================================
+   Migration Examples:
+   ==========================================================================
+
+   OLD (Mixed responsibilities):
+   - container mx-auto (centering + max-width)
+   - px-[10%] (explicit padding)
+   - flex gap-12 (layout logic mixed in)
+
+   NEW (Single responsibility):
+   - .container (pure horizontal alignment with responsive vw padding)
+   - .content-layout (separated layout logic)
+   - Responsive padding: 8vw (mobile) → 9vw (tablet) → 10vw (desktop)
+
+   ========================================================================== */
+
 /* Marquee Animation Styles */
 .marquee-track {
   position: absolute;
@@ -58,4 +270,9 @@ body {
   .marquee-track:hover {
     animation-play-state: paused;
   }
+}
+
+/* Project second footer heading style */
+.second-footer_heading {
+  font-size: 2rem;
 }
