@@ -191,11 +191,13 @@ export function HamburgerMenu({ className }: HamburgerMenuProps) {
 
   return (
     <>
-      {/* Responsive Navigation Bar with Flexbox */}
-      <div 
-        className="fixed top-0 left-0 right-0 h-16 md:h-20 z-[1] flex items-center justify-between px-[10%]" 
+      {/* Full-width Navigation Background */}
+      <div
+        className="fixed top-0 left-0 right-0 h-16 md:h-20 z-[1]"
         style={{ backgroundColor: "#080808" }}
       >
+        {/* Responsive Navigation Bar with Flexbox */}
+        <div className="flex items-center justify-between container h-full">
         {/* Logo */}
         <button
           onClick={() => {
@@ -254,6 +256,7 @@ export function HamburgerMenu({ className }: HamburgerMenuProps) {
           <div ref={line3Ref} className="w-5 h-0.5 bg-black origin-center" />
         </button>
         </div>
+      </div>
 
       <div
         ref={backdropRef}
@@ -311,10 +314,15 @@ export function HamburgerMenu({ className }: HamburgerMenuProps) {
                     }, 100);
                   }
                 }}
-                className="block text-2xl font-semibold text-black hover:text-gray-800 transition-colors duration-200 touch-manipulation py-2 font-roobert text-left cursor-pointer"
+                className="group flex items-center text-2xl font-semibold text-black hover:text-gray-800 transition-colors duration-200 touch-manipulation py-2 font-roobert text-left cursor-pointer"
                 style={{ fontFamily: "var(--font-roobert)" }}
               >
-                {item.label}
+                <span>{item.label}</span>
+                <span className="inline-flex w-0 h-0 ml-0 transition-all duration-200 ease-out group-hover:w-2.5 group-hover:h-2.5 group-hover:ml-4 text-transparent group-hover:text-gray-800">
+                  <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                    <path d="M3.3345 1.13601L0.47051 4L0 3.52949L2.86365 0.665502H0.339739V0H4V3.66026H3.3345V1.13601Z" fill="currentColor"/>
+                  </svg>
+                </span>
               </button>
             ))}
           </div>

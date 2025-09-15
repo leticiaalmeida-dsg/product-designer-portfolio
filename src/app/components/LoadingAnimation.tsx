@@ -127,26 +127,26 @@ export default function LoadingAnimation() {
       // Curtains open from center (top goes up, bottom goes down)
       .to(curtainTopRef.current, {
         y: '-100vh',
-        duration: 1.2,
+        duration: 0.5,
         ease: 'power2.inOut',
       }, 0)
       .to(curtainBottomRef.current, {
         y: '100vh',
-        duration: 1.2,
+        duration: 0.5,
         ease: 'power2.inOut',
       }, 0)
       // Content fades out
       .to(contentRef.current, {
         opacity: 0,
         scale: 0.8,
-        duration: 0.8,
+        duration: 0.3,
         ease: 'power2.out',
-      }, 1.5)
+      }, 0.6)
       // Complete loading after animation
       .call(() => {
         setIsLoading(false);
         setDestinationPage(''); // Clear destination page
-      }, [], 2.3);
+      }, [], 0.9);
 
     return tl;
   };
@@ -221,12 +221,10 @@ export default function LoadingAnimation() {
         <div className="flex items-center gap-4">
           {/* Pink Arrow */}
           <svg
-            width="36"
-            height="36"
             viewBox="0 0 48 48"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="flex-shrink-0"
+            className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8"
           >
             <mask id="path-1-inside-1_3248_5368" fill="white">
               <path d="M40.014 13.6321L5.64612 48L0 42.3539L34.3638 7.98602H4.07687V0H48V43.9231H40.014V13.6321Z"/>

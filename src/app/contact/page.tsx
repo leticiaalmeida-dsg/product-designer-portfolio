@@ -42,11 +42,11 @@ export default function ContactPage() {
   return (
     <>
       <HamburgerMenu />
-      <main className="bg-[#080808] min-h-screen text-white px-[10%] pt-32 pb-24">
-          <div className="container max-w-3xl">
+      <main className="bg-[#080808] min-h-screen text-white pt-32 pb-24">
+          <div className="container">
           <div className="mb-16">
-            <h1 className="text-[5rem] font-normal mb-8">GET IN TOUCH</h1>
-            <p className="text-2xl text-gray-400 max-w-xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-normal mb-8">GET IN TOUCH</h1>
+            <p className="text-base md:text-lg text-gray-400">
               Have a project in mind? Let&apos;s create something amazing together.
             </p>
           </div>

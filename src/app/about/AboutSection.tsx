@@ -9,12 +9,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ArrowIcon = () => (
   <svg
-    width="16"
-    height="16"
+    width="24"
+    height="24"
     viewBox="0 0 12 12"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="text-[var(--pink-dark-bg)] ml-4"
+    className="text-[var(--pink-dark-bg)] w-2 h-2 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5 ml-4"
   >
     <mask id="path-1-about-dedicated" fill="white">
       <path d="M10.0035 3.40804L1.41153 12L0 10.5885L8.59096 1.99651H1.01922V0H12V10.9808H10.0035V3.40804Z"/>
@@ -70,13 +70,13 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#080808] text-white py-20 px-[10%]">
-      <div className="container mx-auto">
-        <div className="space-y-20">
+    <section ref={sectionRef} className="bg-[#080808] text-white pt-20 md:pt-28 lg:pt-32 xl:pt-36 pb-12 md:pb-24 lg:pb-28">
+      <div className="container">
+        <div className="vertical-layout">
           {/* About Section */}
-          <div className="about flex justify-between items-start">
+          <div className="about flex flex-col md:flex-row md:justify-between items-start gap-6 md:gap-0">
             {/* Left Side - ABOUT */}
-            <div className="w-[40%]">
+            <div className="w-full md:w-[40%]">
               <div className="inline-block">
                 <h2 className="text-[0.875rem] font-normal text-[var(--pink-dark-bg)] tracking-wide">
                   WHAT I DO
@@ -85,19 +85,19 @@ export default function AboutSection() {
             </div>
 
             {/* Right Side - Large Paragraph */}
-            <div className="w-[65%] flex items-start gap-6">
+            <div className="w-full md:w-[65%] flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
               <div className="w-[5rem] shrink-0"></div>
               <SplitText
                 text="I design strategies, digital products, brands, and visual systems that connect — across web, mobile, and marketing. From research to UI and handoff, I love working end-to-end."
-                className="text-[2rem] font-medium leading-[1.5] text-white"
+                className="text-lg md:text-xl lg:text-2xl font-medium leading-[1.5] text-white"
               />
             </div>
           </div>
 
-          {/* About Section Duplicate */}
-          <div className="about flex justify-between items-start">
-            {/* Left Side - ABOUT */}
-            <div className="w-[40%]">
+          {/* HOW I DO IT Section */}
+          <div className="about flex flex-col md:flex-row md:justify-between items-start gap-6 md:gap-0">
+            {/* Left Side - HOW I DO IT */}
+            <div className="w-full md:w-[40%]">
               <div className="inline-block">
                 <h2 className="text-[0.875rem] font-normal text-[var(--pink-dark-bg)] tracking-wide">
                   HOW I DO IT
@@ -106,19 +106,19 @@ export default function AboutSection() {
             </div>
 
             {/* Right Side - Large Paragraph */}
-            <div className="w-[65%] flex items-start gap-6">
+            <div className="w-full md:w-[65%] flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
               <div className="w-[5rem] shrink-0"></div>
               <SplitText
                 text="I design strategies, digital products, brands, and visual systems that connect — across web, mobile, and marketing. From research to UI and handoff, I love working end-to-end."
-                className="text-[2rem] font-medium leading-[1.5] text-white"
+                className="text-lg md:text-xl lg:text-2xl font-medium leading-[1.5] text-white"
               />
             </div>
           </div>
 
-          {/* What I Do Section */}
-          <div className="what-i-do flex justify-between items-start">
-            {/* Left Side - WHAT I DO */}
-            <div className="w-[40%]">
+          {/* EXPERTISE Section */}
+          <div className="what-i-do flex flex-col md:flex-row md:justify-between items-start gap-6 md:gap-0">
+            {/* Left Side - EXPERTISE */}
+            <div className="w-full md:w-[40%]">
               <div className="inline-block">
                 <h2 className="text-[0.875rem] font-normal text-[var(--pink-dark-bg)] tracking-wide">
                   EXPERTISE
@@ -127,45 +127,45 @@ export default function AboutSection() {
             </div>
 
             {/* Right Side - Skills Tags */}
-            <div className="w-[65%] flex items-start gap-6">
+            <div className="w-full md:w-[65%] flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
               <div className="w-[5rem] shrink-0"></div>
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex items-center">
-                  <SplitText text="ART DIRECTION" className="text-[2rem] font-normal text-white uppercase tracking-wide" />
+                  <SplitText text="ART DIRECTION" className="text-lg md:text-xl lg:text-2xl font-normal text-white uppercase tracking-wide" />
                   <ArrowIcon />
                 </div>
 
                 <div className="flex items-center">
-                  <SplitText text="BRANDING" className="text-[2rem] font-normal text-white uppercase tracking-wide" />
+                  <SplitText text="BRANDING" className="text-lg md:text-xl lg:text-2xl font-normal text-white uppercase tracking-wide" />
                   <ArrowIcon />
                 </div>
 
                 <div className="flex items-center">
-                  <SplitText text="PRODUCT STRATEGY" className="text-[2rem] font-normal text-white uppercase tracking-wide" />
+                  <SplitText text="PRODUCT STRATEGY" className="text-lg md:text-xl lg:text-2xl font-normal text-white uppercase tracking-wide" />
                   <ArrowIcon />
                 </div>
 
                 <div className="flex items-center">
-                  <SplitText text="UX & UI DESIGN" className="text-[2rem] font-normal text-white uppercase tracking-wide" />
+                  <SplitText text="UX & UI DESIGN" className="text-lg md:text-xl lg:text-2xl font-normal text-white uppercase tracking-wide" />
                   <ArrowIcon />
                 </div>
 
                 <div className="flex items-center">
-                  <SplitText text="INTERACTION DESIGN" className="text-[2rem] font-normal text-white uppercase tracking-wide" />
+                  <SplitText text="INTERACTION DESIGN" className="text-lg md:text-xl lg:text-2xl font-normal text-white uppercase tracking-wide" />
                   <ArrowIcon />
                 </div>
 
                 <div className="flex items-center">
-                  <SplitText text="FRONTEND DEV" className="text-[2rem] font-normal text-white uppercase tracking-wide" />
+                  <SplitText text="FRONTEND DEV" className="text-lg md:text-xl lg:text-2xl font-normal text-white uppercase tracking-wide" />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Who I Am Section */}
-          <div className="about flex justify-between items-start">
+          {/* WHO I AM Section */}
+          <div className="about flex flex-col md:flex-row md:justify-between items-start gap-6 md:gap-0">
             {/* Left Side - WHO I AM */}
-            <div className="w-[40%]">
+            <div className="w-full md:w-[40%]">
               <div className="inline-block">
                 <h2 className="text-[0.875rem] font-normal text-[var(--pink-dark-bg)] tracking-wide">
                   WHO I AM
@@ -174,7 +174,7 @@ export default function AboutSection() {
             </div>
 
             {/* Right Side - Profile and Description */}
-            <div className="w-[65%] flex items-start gap-6">
+            <div className="w-full md:w-[65%] flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
               <Image
                 src="/images/me.png"
                 alt="Profile picture"
@@ -184,7 +184,7 @@ export default function AboutSection() {
               />
               <SplitText
                 text="I'm a big fan of swimming, especially in open water! I love learning new things and enjoying movies in my free time. When I'm not busy designing, you can often find me scuba diving, learning French and Italian, or preparing for my next 6 km swim challenge. It keeps life exciting!"
-                className="text-[2rem] font-medium leading-[1.5] text-white"
+                className="text-lg md:text-xl lg:text-2xl font-medium leading-[1.5] text-white"
               />
             </div>
           </div>
